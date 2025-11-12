@@ -1,0 +1,194 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+---
+
+<BaseLayout 
+  title="Services" 
+  description="Mental Edge Counseling LLC offers individual counseling, family counseling, couples counseling, and sports consulting services. We accept most major insurance plans."
+>
+  <Navigation client:load />
+  
+  <main>
+    <!-- Page Header -->
+    <section class="bg-gradient-to-br from-primary-50 to-secondary-50 py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-4">
+          Our Services
+        </h1>
+        <p class="text-xl text-gray-700 text-center max-w-3xl mx-auto">
+          Comprehensive mental health and performance consulting services tailored to your needs.
+        </p>
+      </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Our Mission</h2>
+        <p class="text-xl text-gray-700 text-center leading-relaxed">
+          Helping people to reach their full potential and to live life to the fullest.
+        </p>
+      </div>
+    </section>
+
+    <!-- Background Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Background</h2>
+        <div class="prose prose-lg max-w-none text-gray-700">
+          <p class="mb-4">
+            Nathan serves individuals, couples, and families in Mokena, New Lenox, Orland Park, 
+            Tinley Park, Frankfort, and surrounding areas. He provides treatment for a wide range 
+            of mental health concerns including:
+          </p>
+          <ul class="list-disc list-inside space-y-2 mb-6">
+            <li>Depression</li>
+            <li>Anxiety</li>
+            <li>Bipolar Disorder</li>
+            <li>Social Issues</li>
+            <li>PTSD (Post-Traumatic Stress Disorder)</li>
+            <li>ADHD/ODD (Attention-Deficit/Hyperactivity Disorder / Oppositional Defiant Disorder)</li>
+            <li>Schizophrenia</li>
+            <li>Relationship Issues</li>
+            <li>Stress Management</li>
+            <li>Anger Management</li>
+            <li>Life Adjustments</li>
+            <li>Time Management</li>
+          </ul>
+          <p class="mb-4">
+            As a Certified Mental Performance Consultant, Nathan also helps performers develop essential 
+            mental skills including:
+          </p>
+          <ul class="list-disc list-inside space-y-2">
+            <li>Goal Setting</li>
+            <li>Focus and Concentration</li>
+            <li>Relaxation Techniques</li>
+            <li>Motivation Strategies</li>
+            <li>Managing Pressure and Performance Anxiety</li>
+            <li>Injury Recovery and Rehabilitation Support</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Offered -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Services We Offer</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-primary-50 rounded-lg p-8">
+            <div class="text-4xl mb-4">👤</div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Individual Counseling</h3>
+            <p class="text-gray-700 leading-relaxed">
+              One-on-one therapy sessions designed to address your unique mental health needs. 
+              We use evidence-based approaches to help you overcome challenges and achieve your goals.
+            </p>
+          </div>
+
+          <div class="bg-secondary-50 rounded-lg p-8">
+            <div class="text-4xl mb-4">👨‍👩‍👧‍👦</div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Family Counseling</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Strengthen family bonds and improve communication through family therapy. 
+              We work with all family members to create a healthier, more supportive home environment.
+            </p>
+          </div>
+
+          <div class="bg-primary-50 rounded-lg p-8">
+            <div class="text-4xl mb-4">💑</div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Couples Counseling</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Improve your relationship through couples therapy. We help partners communicate 
+              effectively, resolve conflicts, and build a stronger, more fulfilling partnership.
+            </p>
+          </div>
+
+          <div class="bg-secondary-50 rounded-lg p-8">
+            <div class="text-4xl mb-4">🏃</div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Sports Consulting</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Mental performance consulting for athletes and performers. Develop mental skills 
+              to enhance performance, manage pressure, and achieve peak performance in your field.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Insurance Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Accepted Insurance Carriers</h2>
+        <div class="bg-white rounded-lg shadow-md p-8">
+          <p class="text-lg text-gray-700 mb-6">
+            We accept the following insurance plans:
+          </p>
+          <ul class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-primary-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-gray-700">Blue Cross Blue Shield PPO</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-primary-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-gray-700">Blue Choice PPO</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-primary-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-gray-700">Cigna</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-primary-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-gray-700">United Behavioral Health</span>
+            </li>
+            <li class="flex items-center">
+              <svg class="w-5 h-5 text-primary-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+              </svg>
+              <span class="text-gray-700">Aetna</span>
+            </li>
+          </ul>
+          <p class="text-sm text-gray-600 mt-6">
+            Please contact us to verify your specific insurance coverage and benefits.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary-600 text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold mb-6">Ready to Get Started?</h2>
+        <p class="text-xl mb-8 text-primary-100">
+          Contact us today to schedule your first appointment or learn more about our services.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/contact"
+            class="bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
+          >
+            Contact Us
+          </a>
+          <a
+            href="/paperwork"
+            class="bg-primary-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-800 transition-colors shadow-lg border-2 border-white"
+          >
+            New Client Paperwork
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer client:load />
+</BaseLayout>
+

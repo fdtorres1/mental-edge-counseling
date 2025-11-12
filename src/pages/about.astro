@@ -1,0 +1,116 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import TherapistCard from '../components/TherapistCard';
+---
+
+<BaseLayout 
+  title="About Us" 
+  description="Meet our team of licensed mental health professionals at Mental Edge Counseling LLC - Nathan Lagacy, Kimberly Briney, and Eduardo Castillo."
+>
+  <Navigation client:load />
+  
+  <main>
+    <!-- Page Header -->
+    <section class="bg-gradient-to-br from-primary-50 to-secondary-50 py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 text-center mb-4">
+          About Our Team
+        </h1>
+        <p class="text-xl text-gray-700 text-center max-w-3xl mx-auto">
+          Our experienced counselors are dedicated to helping you achieve your mental health and performance goals.
+        </p>
+      </div>
+    </section>
+
+    <!-- Therapists Section -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="space-y-12">
+          <!-- Nathan Lagacy -->
+          <div>
+            <TherapistCard
+              client:load
+              name="Nathan Lagacy"
+              credentials="LCPC, CMPC"
+              image="https://static.wixstatic.com/media/979766_fe2237b8f61041ff84314f5046f3de39~mv2.jpg/v1/crop/x_34,y_49,w_1127,h_1194/fill/w_674,h_714,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/979766_fe2237b8f61041ff84314f5046f3de39~mv2.jpg"
+              specialties={[
+                'Depression',
+                'Anxiety',
+                'Schizophrenia',
+                'PTSD',
+                'ADHD',
+                'Mental Performance',
+                'Sports Psychology'
+              ]}
+              description="Nathan Lagacy is a Licensed Clinical Professional Counselor and Certified Mental Performance Consultant. He works with individuals suffering from depression, anxiety, schizophrenia, PTSD, ADHD, and more. Nathan also provides mental performance consulting to athletes and performers, helping them develop the mental skills needed to excel in their fields. With a strong background in sports and a belief in health and wellness, Nathan takes a holistic approach to mental health and performance."
+            />
+          </div>
+
+          <!-- Kimberly Briney -->
+          <div>
+            <TherapistCard
+              client:load
+              name="Kimberly Briney"
+              credentials="Psy.D., RDDP"
+              image="https://static.wixstatic.com/media/979766_7602706f671b49eb8f0655035360a943~mv2.jpg/v1/fill/w_556,h_836,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/979766_7602706f671b49eb8f0655035360a943~mv2.jpg"
+              specialties={[
+                'Depression',
+                'Bipolar Disorder',
+                'Anxiety',
+                'PTSD',
+                'Anger Management',
+                'Relationship Issues',
+                'Personality Disorders',
+                'Trauma-Informed Care',
+                'Co-occurring Disorders',
+                'Performance Coaching'
+              ]}
+              description="Kimberly Briney is a Licensed Clinical Psychologist with 22 years of experience in the field. She specializes in treating depression, bipolar disorder, anxiety, PTSD, anger issues, relationship issues, and personality disorders. Kimberly has extensive expertise in trauma-informed and gender-responsive treatment, as well as co-occurring disorders. She also provides performance coaching to help clients achieve their personal and professional goals."
+            />
+          </div>
+
+          <!-- Eduardo Castillo -->
+          <div>
+            <TherapistCard
+              client:load
+              name="Eduardo Castillo"
+              credentials="LPC"
+              image="https://static.wixstatic.com/media/979766_adcc8f4229b9442da949badc4f1731ba~mv2.jpg/v1/fill/w_614,h_618,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Headshot.jpg"
+              specialties={[
+                'CBT',
+                'ACT',
+                'DBT',
+                'REBT',
+                'Depression',
+                'Anxiety',
+                'Grief',
+                'Emotional Dysregulation',
+                'School Stress',
+                'Sports Psychology',
+                'Bilingual (English/Spanish)'
+              ]}
+              description="Eduardo Castillo is a bilingual (English/Spanish) Licensed Professional Counselor who holds master's degrees in Clinical Mental Health Counseling and Sport & Human Performance. He specializes in Cognitive Behavioral Therapy (CBT), Acceptance and Commitment Therapy (ACT), Dialectical Behavior Therapy (DBT), and Rational Emotive Behavior Therapy (REBT). Eduardo works with adults and adolescents on issues including depression, anxiety, grief, emotional dysregulation, and school stress. He also offers psychological skills training to athletes, focusing on emotional regulation, stress and energy management, motivation, and performance optimization."
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mission Statement -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
+        <p class="text-xl text-gray-700 leading-relaxed">
+          At Mental Edge Counseling LLC, we are committed to helping people reach their full potential 
+          and live life to the fullest. Through evidence-based therapeutic approaches and personalized care, 
+          we support our clients in overcoming challenges, building resilience, and achieving their goals.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <Footer client:load />
+</BaseLayout>
+

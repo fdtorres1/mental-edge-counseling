@@ -1,0 +1,73 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  canonicalURL?: URL;
+}
+
+const { 
+  title, 
+  description = 'Mental Edge Counseling LLC - Helping people reach their full potential and live life to the fullest.',
+  canonicalURL = Astro.url
+} = Astro.props;
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "Mental Edge Counseling LLC",
+  "description": description,
+  "url": canonicalURL.origin,
+  "telephone": "815-277-1092",
+  "email": "mentaledgecounseling@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "11106 Front Street",
+    "addressLocality": "Mokena",
+    "addressRegion": "IL",
+    "postalCode": "60448",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "41.526789",
+    "longitude": "-87.885123"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": ["Mokena", "New Lenox", "Orland Park", "Tinley Park", "Frankfort"]
+  },
+  "priceRange": "$$"
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={canonicalURL} />
+    <meta name="keywords" content="mental health counseling, therapy, Mokena IL, licensed counselor, mental performance, sports psychology, anxiety treatment, depression therapy, PTSD counseling" />
+    <meta name="author" content="Mental Edge Counseling LLC" />
+    <meta property="og:title" content={`${title} | Mental Edge Counseling LLC`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={`${title} | Mental Edge Counseling LLC`} />
+    <meta name="twitter:description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <title>{title} | Mental Edge Counseling LLC</title>
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  </head>
+  <body class="min-h-screen bg-white text-gray-900 font-sans antialiased">
+    <slot />
+  </body>
+</html>
+

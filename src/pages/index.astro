@@ -1,0 +1,146 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+---
+
+<BaseLayout title="Home" description="Mental Edge Counseling LLC - Licensed Clinical Professional Counselors and Mental Performance Consultants serving Mokena, IL and surrounding areas.">
+  <Navigation client:load />
+  
+  <main>
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-primary-50 to-secondary-50 py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+            Mental Edge Counseling LLC
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto">
+            Helping people reach their full potential and live life to the fullest.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/contact"
+              class="bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors shadow-lg"
+            >
+              Schedule a Consultation
+            </a>
+            <a
+              href="/services"
+              class="bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors shadow-lg border-2 border-primary-600"
+            >
+              Learn About Our Services
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COVID-19 Notice -->
+    <section class="bg-yellow-50 border-y border-yellow-200 py-4">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-center">
+          <svg class="w-5 h-5 text-yellow-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+          </svg>
+          <p class="text-sm text-yellow-800">
+            <strong>COVID-19 Update:</strong> Sessions are currently offered remotely via video or phone.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Information Section -->
+    <section class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Welcome to Mental Edge Counseling</h2>
+            <p class="text-lg text-gray-700 mb-4">
+              We are a team of licensed mental health professionals dedicated to providing compassionate, 
+              evidence-based counseling services to individuals, couples, and families in Mokena, IL and 
+              surrounding communities.
+            </p>
+            <p class="text-lg text-gray-700 mb-6">
+              Our practice combines traditional mental health counseling with specialized mental performance 
+              consulting, helping clients overcome challenges and achieve their personal and professional goals.
+            </p>
+            <a
+              href="/about"
+              class="inline-block text-primary-600 font-semibold hover:text-primary-700 transition-colors"
+            >
+              Meet Our Team →
+            </a>
+          </div>
+          
+          <div class="bg-gray-50 rounded-lg p-8 shadow-lg">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">Nathan Lagacy, LCPC, CMPC</h3>
+            <p class="text-gray-700 mb-4">
+              <strong>Licensed Clinical Professional Counselor</strong><br />
+              <strong>Certified Mental Performance Consultant</strong>
+            </p>
+            <p class="text-gray-600 mb-6">
+              Nathan specializes in treating depression, anxiety, schizophrenia, PTSD, ADHD, and more. 
+              He also provides mental performance consulting to athletes and performers.
+            </p>
+            <div class="space-y-2 text-sm text-gray-600">
+              <p><strong>Location:</strong> 11106 Front Street, Mokena, IL 60448</p>
+              <p><strong>Phone:</strong> <a href="tel:8152771092" class="text-primary-600 hover:underline">815-277-1092</a></p>
+              <p><strong>Email:</strong> <a href="mailto:mentaledgecounseling@gmail.com" class="text-primary-600 hover:underline">mentaledgecounseling@gmail.com</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Our Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+            <div class="text-primary-600 text-4xl mb-4">👤</div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Individual Counseling</h3>
+            <p class="text-gray-600 text-sm">
+              One-on-one therapy sessions tailored to your unique needs and goals.
+            </p>
+          </div>
+          
+          <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+            <div class="text-primary-600 text-4xl mb-4">👨‍👩‍👧‍👦</div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Family Counseling</h3>
+            <p class="text-gray-600 text-sm">
+              Strengthen family relationships and improve communication.
+            </p>
+          </div>
+          
+          <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+            <div class="text-primary-600 text-4xl mb-4">💑</div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Couples Counseling</h3>
+            <p class="text-gray-600 text-sm">
+              Work together to resolve conflicts and build stronger relationships.
+            </p>
+          </div>
+          
+          <div class="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow">
+            <div class="text-primary-600 text-4xl mb-4">🏃</div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Sports Consulting</h3>
+            <p class="text-gray-600 text-sm">
+              Mental performance training for athletes and performers.
+            </p>
+          </div>
+        </div>
+        <div class="text-center mt-8">
+          <a
+            href="/services"
+            class="inline-block bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-colors"
+          >
+            View All Services
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer client:load />
+</BaseLayout>
