@@ -188,11 +188,13 @@ For questions or issues, contact:
 
 ## Current Status
 
-✅ **Completed:**
+✅ **Version 1.0.0 - Released:**
 - Website rebuild with Astro, React, and Tailwind CSS
 - All pages implemented (Home, About, Services, Paperwork, Contact)
+- Individual therapist pages with full bios
 - Formsubmit integration for contact form
-- Therapist headshots added
+- Therapist headshots downloaded and served locally
+- Custom image positioning for optimal framing
 - SEO optimization and structured data
 - Responsive design and accessibility features
 - GitHub repository created and pushed
@@ -201,5 +203,5 @@ For questions or issues, contact:
 - Add PDF forms for New Client Paperwork
 - Update Google Maps embed with correct coordinates
 - Integrate online scheduling/booking system
-- Update Formsubmit email address
+- Update Formsubmit email address (currently: felix@elarenstudio.com)
 - Optimize and add additional images

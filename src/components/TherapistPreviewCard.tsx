@@ -4,6 +4,7 @@ interface TherapistPreviewCardProps {
   image: string;
   briefBio: string;
   slug: string;
+  objectPosition?: string;
 }
 
 export default function TherapistPreviewCard({
@@ -12,6 +13,7 @@ export default function TherapistPreviewCard({
   image,
   briefBio,
   slug,
+  objectPosition = 'center',
 }: TherapistPreviewCardProps) {
   return (
     <a
@@ -20,12 +22,13 @@ export default function TherapistPreviewCard({
     >
       <div className="flex flex-col items-center text-center">
         <div className="mb-4">
-          <img
-            src={image}
-            alt={`${name}, ${credentials}`}
-            className="w-48 h-48 object-cover rounded-full shadow-md border-4 border-primary-100"
-            loading="lazy"
-          />
+            <img
+              src={image}
+              alt={`${name}, ${credentials}`}
+              className="w-48 h-48 object-cover rounded-full shadow-md border-4 border-primary-100"
+              style={{ objectPosition }}
+              loading="lazy"
+            />
         </div>
         <h3 className="text-2xl font-bold text-gray-900 mb-2">{name}</h3>
         <p className="text-primary-600 font-semibold mb-4">{credentials}</p>

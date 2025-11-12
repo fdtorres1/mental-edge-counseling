@@ -5,6 +5,7 @@ interface TherapistCardProps {
   specialties: string[];
   description: string;
   additionalInfo?: string;
+  objectPosition?: string;
 }
 
 export default function TherapistCard({
@@ -14,6 +15,7 @@ export default function TherapistCard({
   specialties,
   description,
   additionalInfo,
+  objectPosition = 'center',
 }: TherapistCardProps) {
   return (
     <div className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
@@ -24,6 +26,7 @@ export default function TherapistCard({
               src={image}
               alt={`${name}, ${credentials}`}
               className="w-48 h-48 md:w-56 md:h-56 object-cover rounded-lg shadow-md"
+              style={{ objectPosition }}
               loading="lazy"
             />
           </div>
