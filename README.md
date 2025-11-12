@@ -175,8 +175,31 @@ The site includes:
 
 © 2025 Mental Edge Counseling LLC. All rights reserved.
 
+## Repository
+
+- **GitHub:** https://github.com/fdtorres1/mental-edge-counseling
+- **Issues:** See [GitHub Issues](https://github.com/fdtorres1/mental-edge-counseling/issues) for current tasks and enhancements
+
 ## Support
 
 For questions or issues, contact:
 - Email: mentaledgecounseling@gmail.com
 - Phone: 815-277-1092
+
+## Current Status
+
+✅ **Completed:**
+- Website rebuild with Astro, React, and Tailwind CSS
+- All pages implemented (Home, About, Services, Paperwork, Contact)
+- Formsubmit integration for contact form
+- Therapist headshots added
+- SEO optimization and structured data
+- Responsive design and accessibility features
+- GitHub repository created and pushed
+
+📋 **Open Issues:**
+- Add PDF forms for New Client Paperwork
+- Update Google Maps embed with correct coordinates
+- Integrate online scheduling/booking system
+- Update Formsubmit email address
+- Optimize and add additional images
