@@ -1,0 +1,133 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation';
+import Footer from '../../components/Footer';
+import TherapistCard from '../../components/TherapistCard';
+---
+
+<BaseLayout 
+  title="Eduardo Castillo, LPC" 
+  description="Eduardo Castillo is a bilingual Licensed Professional Counselor at Mental Edge Counseling LLC, specializing in CBT, ACT, DBT, and REBT for adults, adolescents, and athletes."
+>
+  <Navigation client:load />
+  
+  <main>
+    <!-- Page Header -->
+    <section class="bg-gradient-to-br from-primary-50 to-secondary-50 py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <a
+            href="/about"
+            class="inline-flex items-center text-primary-600 hover:text-primary-700 mb-6 transition-colors"
+          >
+            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+            Back to Our Team
+          </a>
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Eduardo Castillo
+          </h1>
+          <p class="text-xl text-primary-600 font-semibold">
+            Licensed Professional Counselor (LPC)<br />
+            Bilingual (English/Spanish)
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Therapist Details -->
+    <section class="py-16 bg-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <TherapistCard
+          client:load
+          name="Eduardo Castillo"
+          credentials="LPC"
+          image="/images/therapists/eduardo-castillo.jpg"
+          specialties={[
+            'CBT',
+            'ACT',
+            'DBT',
+            'REBT',
+            'Depression',
+            'Anxiety',
+            'Grief',
+            'Emotional Dysregulation',
+            'School Stress',
+            'Sports Psychology',
+            'Bilingual (English/Spanish)'
+          ]}
+          description="Eduardo Castillo is a bilingual (English/Spanish) Licensed Professional Counselor who holds master's degrees in Clinical Mental Health Counseling and Sport & Human Performance. He specializes in Cognitive Behavioral Therapy (CBT), Acceptance and Commitment Therapy (ACT), Dialectical Behavior Therapy (DBT), and Rational Emotive Behavior Therapy (REBT). Eduardo works with adults and adolescents on issues including depression, anxiety, grief, emotional dysregulation, and school stress. He also offers psychological skills training to athletes, focusing on emotional regulation, stress and energy management, motivation, and performance optimization."
+        />
+      </div>
+    </section>
+
+    <!-- Additional Information -->
+    <section class="py-16 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6">Areas of Expertise</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="bg-white rounded-lg p-6 shadow-md">
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Therapeutic Approaches</h3>
+            <p class="text-gray-700 mb-3">
+              Eduardo specializes in evidence-based therapeutic approaches including:
+            </p>
+            <ul class="list-disc list-inside text-gray-700 space-y-1">
+              <li>Cognitive Behavioral Therapy (CBT)</li>
+              <li>Acceptance and Commitment Therapy (ACT)</li>
+              <li>Dialectical Behavior Therapy (DBT)</li>
+              <li>Rational Emotive Behavior Therapy (REBT)</li>
+            </ul>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-md">
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Bilingual Services</h3>
+            <p class="text-gray-700 mb-3">
+              Eduardo provides counseling services in both English and Spanish, making mental health 
+              services more accessible to Spanish-speaking clients and their families.
+            </p>
+            <p class="text-gray-700">
+              He works with adults and adolescents on depression, anxiety, grief, emotional dysregulation, 
+              and school stress.
+            </p>
+          </div>
+          <div class="bg-white rounded-lg p-6 shadow-md md:col-span-2">
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Sports Psychology</h3>
+            <p class="text-gray-700">
+              With a master's degree in Sport & Human Performance, Eduardo offers psychological skills 
+              training to athletes, focusing on emotional regulation, stress and energy management, 
+              motivation, and performance optimization. He helps athletes develop the mental resilience 
+              needed to excel in their sport.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary-600 text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold mb-6">Ready to Get Started?</h2>
+        <p class="text-xl mb-8 text-primary-100">
+          Contact us to schedule an appointment with Eduardo or learn more about our services.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/contact"
+            class="bg-white text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
+          >
+            Contact Us
+          </a>
+          <a
+            href="/services"
+            class="bg-primary-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-800 transition-colors shadow-lg border-2 border-white"
+          >
+            View Services
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer client:load />
+</BaseLayout>
+

@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import TherapistCard from '../components/TherapistCard';
+import TherapistPreviewCard from '../components/TherapistPreviewCard';
 ---
 
 <BaseLayout 
@@ -27,73 +27,36 @@ import TherapistCard from '../components/TherapistCard';
     <!-- Therapists Section -->
     <section class="py-16 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="space-y-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- Nathan Lagacy -->
-          <div>
-            <TherapistCard
-              client:load
-              name="Nathan Lagacy"
-              credentials="LCPC, CMPC"
-              image="/images/therapists/nathan-lagacy.jpg"
-              specialties={[
-                'Depression',
-                'Anxiety',
-                'Schizophrenia',
-                'PTSD',
-                'ADHD',
-                'Mental Performance',
-                'Sports Psychology'
-              ]}
-              description="Nathan Lagacy is a Licensed Clinical Professional Counselor and Certified Mental Performance Consultant. He works with individuals suffering from depression, anxiety, schizophrenia, PTSD, ADHD, and more. Nathan also provides mental performance consulting to athletes and performers, helping them develop the mental skills needed to excel in their fields. With a strong background in sports and a belief in health and wellness, Nathan takes a holistic approach to mental health and performance."
-            />
-          </div>
+          <TherapistPreviewCard
+            client:load
+            name="Nathan Lagacy"
+            credentials="LCPC, CMPC"
+            image="/images/therapists/nathan-lagacy.jpg"
+            briefBio="Licensed Clinical Professional Counselor and Certified Mental Performance Consultant specializing in mental health treatment and sports psychology."
+            slug="nathan-lagacy"
+          />
 
           <!-- Kimberly Briney -->
-          <div>
-            <TherapistCard
-              client:load
-              name="Kimberly Briney"
-              credentials="Psy.D., RDDP"
-              image="/images/therapists/kimberly-briney.jpg"
-              specialties={[
-                'Depression',
-                'Bipolar Disorder',
-                'Anxiety',
-                'PTSD',
-                'Anger Management',
-                'Relationship Issues',
-                'Personality Disorders',
-                'Trauma-Informed Care',
-                'Co-occurring Disorders',
-                'Performance Coaching'
-              ]}
-              description="Kimberly Briney is a Licensed Clinical Psychologist with 22 years of experience in the field. She specializes in treating depression, bipolar disorder, anxiety, PTSD, anger issues, relationship issues, and personality disorders. Kimberly has extensive expertise in trauma-informed and gender-responsive treatment, as well as co-occurring disorders. She also provides performance coaching to help clients achieve their personal and professional goals."
-            />
-          </div>
+          <TherapistPreviewCard
+            client:load
+            name="Kimberly Briney"
+            credentials="Psy.D., RDDP"
+            image="/images/therapists/kimberly-briney.jpg"
+            briefBio="Licensed Clinical Psychologist with 22 years of experience in trauma-informed care, co-occurring disorders, and performance coaching."
+            slug="kimberly-briney"
+          />
 
           <!-- Eduardo Castillo -->
-          <div>
-            <TherapistCard
-              client:load
-              name="Eduardo Castillo"
-              credentials="LPC"
-              image="/images/therapists/eduardo-castillo.jpg"
-              specialties={[
-                'CBT',
-                'ACT',
-                'DBT',
-                'REBT',
-                'Depression',
-                'Anxiety',
-                'Grief',
-                'Emotional Dysregulation',
-                'School Stress',
-                'Sports Psychology',
-                'Bilingual (English/Spanish)'
-              ]}
-              description="Eduardo Castillo is a bilingual (English/Spanish) Licensed Professional Counselor who holds master's degrees in Clinical Mental Health Counseling and Sport & Human Performance. He specializes in Cognitive Behavioral Therapy (CBT), Acceptance and Commitment Therapy (ACT), Dialectical Behavior Therapy (DBT), and Rational Emotive Behavior Therapy (REBT). Eduardo works with adults and adolescents on issues including depression, anxiety, grief, emotional dysregulation, and school stress. He also offers psychological skills training to athletes, focusing on emotional regulation, stress and energy management, motivation, and performance optimization."
-            />
-          </div>
+          <TherapistPreviewCard
+            client:load
+            name="Eduardo Castillo"
+            credentials="LPC"
+            image="/images/therapists/eduardo-castillo.jpg"
+            briefBio="Bilingual Licensed Professional Counselor specializing in CBT, ACT, DBT, and REBT for adults, adolescents, and athletes."
+            slug="eduardo-castillo"
+          />
         </div>
       </div>
     </section>
